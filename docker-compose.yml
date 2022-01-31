@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+
+  web:
+    container_name: simple_webapp
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 8088:8081
+
+  redis:
+    image: "redis:alpine"
